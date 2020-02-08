@@ -96,6 +96,11 @@ def restore():
   main(AcList,vocabulary)
 
 
+os.system("mkdir cfg > /dev/null")
+os.system("mkdir saves > /dev/null")
+os.system("mkdir voc > /dev/null")
+
+
 if (len(argv)==1):
   bot1.init()
   AcList=getAclist()
