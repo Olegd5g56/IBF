@@ -48,12 +48,14 @@ def getLastLine(path):
 
 
 def chechAc(user,password):
-  try:
-    return str(subprocess.check_output(['./checkAc', user, password]))
-  except:
-    print("Not connect!!!")
-    bot1.delmsg()
-    exit(1)
+  while True:
+    try:
+      return str(subprocess.check_output(['./checkAc', user, password]))
+      break
+    except:
+      print("Not connect!!!")
+      time.sleep(1)
+    
 
 def save(user,password):
   print("saving...")
